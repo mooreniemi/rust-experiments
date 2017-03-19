@@ -8,6 +8,11 @@ mod graph {
     }
 
     impl<'c> Node<'c> {
+        // translation of Ruby
+        // def dfs(n)
+        //   p "node: #{n.value}"
+        //   [n] + n.children.flat_map(&method(:dfs))
+        // end
         pub fn dfs(&self) -> Vec<&Node> {
             println!("node: {:?}", self.value);
 
